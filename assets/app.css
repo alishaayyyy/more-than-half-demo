@@ -1,0 +1,276 @@
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  background-color: rgba(0, 0, 0, 0.89) !important;
+  color: white !important;
+}
+
+/* Base styling for navbar brand (logo) */
+.navbar-brand {
+  background-color: rgb(255, 255, 255);
+  padding: 1em 1.5em;
+  display: inline-block; /* Keeps the logo inline */
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: 520;
+  transition: 0.2s ease-out;
+}
+
+/* Hover effect */
+.navbar-brand:hover,
+.navbar-nav .nav-link:hover {
+  background-color: #005bb5;
+  border-radius: 10%;
+  color: white !important;
+}
+
+/* Styling for the navbar */
+.navbar {
+  min-height: 50px !important;
+}
+
+.navbar-nav li a {
+  width: 100%;
+}
+
+.btn {
+  transition: 0.7s ease-in-out !important;
+}
+
+.btn:hover {
+  background-color: black !important;
+  color: white !important;
+}
+
+.card {
+  border: 1px solid white !important;
+}
+
+.fa-circle-play {
+  transition: 0.7s ease-in-out !important;
+}
+
+.fa-circle-play:hover {
+  color: white !important;
+}
+
+.navbar-toggler-icon {
+  background-color: white !important; /* White color for the hamburger icon */
+  box-shadow: 0px 2px 5px white; /* Light shadow */
+  border-radius: 4px; /* Optional: Rounded corners */
+}
+
+.navbar .fa:hover {
+  color: #007bff; /* Change icon color on hover */
+  transition: color 0.3s ease;
+
+}
+
+
+/* About us and all first pic */
+.image-container {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+.image-container img {
+  width: 100%;
+  max-height: 200px;
+  display: block;
+}
+
+/* Dark blue shade effect */
+.image-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 139, 0.4); /* Dark blue with opacity */
+  z-index: 1; /* Keeps it behind the text */
+}
+
+/* About Us Text */
+.about-us-text {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 3rem; /* Large text */
+  font-weight: bold;
+  z-index: 2; /* Places text above the dark shade */
+}
+
+
+.timetable-container {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  border: 1px solid white;
+  background-color: #0d0dff;
+}
+
+.timetable-header {
+  text-align: center;
+  color: #333;
+}
+
+.timetable-section {
+  margin-bottom: 20px;
+}
+
+.timetable-section h2 {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.timetable-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.timetable-table, th, td {
+  border: 1px solid #ddd;
+}
+
+th, td {
+  padding: 10px;
+  text-align: center;
+}
+
+th {
+  background-color: #000000;
+}
+
+.timetable-table .heading {
+  text-align: center;
+  font-weight: bold;
+}
+
+.marks-section th, .marks-section td {
+  text-align: center;
+}
+
+.periods-section td {
+  font-weight: bold;
+}
+
+/* Add media query for responsive design */
+@media (max-width: 768px) {
+  .timetable-table {
+    font-size: 14px;
+  }
+  .timetable-header {
+    font-size: 20px;
+  }
+}
+
+
+
+/* Media Queries for Responsiveness */
+
+@media screen and (max-width: 1100px) {
+  .btn {
+    margin-left: 0 !important;
+  }
+}
+
+/* For medium and small screens */
+@media screen and (max-width: 992px) {
+  .navbar-brand img {
+    height: 3em; /* Adjust logo size */
+  }
+
+  .navbar-nav {
+    flex-direction: column; /* Stack navbar items */
+    text-align: center; /* Center the text for better readability */
+  }
+
+  .navbar-nav .nav-item {
+    width: 100%; /* Make each item take full width */
+    text-align: center; /* Center text in each nav item */
+  }
+
+  .navbar-nav .nav-link {
+    display: block; /* Make nav links block-level to take full width */
+    padding: 1em; /* Add padding inside each nav item for better click area */
+    font-size: 1.1em; /* Increase font size */
+  }
+
+  .navbar-toggler {
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Slight border for hamburger menu */
+  }
+
+  .navbar-collapse {
+    text-align: center; /* Center the collapsed menu links */
+  }
+
+  .direct {
+    flex-direction: column !important;
+    width: 100% !important;
+  }
+  .about-us-text {
+    position: absolute;
+    top: 50%;
+    left: 30%;}
+    
+   
+}
+
+@media screen and (max-width: 600px) {
+  .image-gar {
+    width: 290px !important;
+    height: auto !important; /* Maintain aspect ratio */
+  }
+
+  .carousel {
+    margin-top: 5px !important;
+  }
+  .change{
+    padding-left: 10px !important;
+  }
+  
+}
+
+/* For very small screens */
+@media screen and (max-width: 400px) {
+  .image-gar {
+    width: 200px !important;
+    height: auto !important; /* Maintain aspect ratio */
+  }
+
+  .navbar {
+    padding: 0 !important;
+  }
+
+  .navbar-nav .nav-item {
+    margin-bottom: 0;} 
+  .card{
+    width: 18rem !important;
+  }}
+
+
+
+    .less{
+      padding: 0em !important;
+    }
+    .less1{
+      width: 30% !important;
+    }
+    .margin{
+      margin-left: 30% !important;
+    }
+
+    @media (max-width: 768px) {
+      .about-us-text {
+        font-size: 2rem; /* Slightly smaller text on mobile */
+      }
+    }
